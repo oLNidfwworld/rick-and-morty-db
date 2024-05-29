@@ -1,0 +1,32 @@
+@import './vars.scss';
+
+@mixin xs {
+  @media screen and (min-width: $breakpoint-xs) {
+    @content;
+  }
+}
+@mixin sm {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+@mixin md {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+@mixin xl {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media screen and (min-width: $breakpoint-2xl) {
+    @content;
+  }
+}

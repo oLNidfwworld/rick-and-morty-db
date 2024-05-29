@@ -1,0 +1,35 @@
+@import './resets.css';
+@import './breakpoints.scss';
+
+body {
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 10px;
+
+  @include xs {
+    padding: 0 15px;
+  }
+  @include sm {
+    padding: 0 20px;
+  }
+  @include md {
+    max-width: 980px;
+    margin: auto;
+  }
+  @include lg {
+    max-width: 1240px;
+  }
+  @include xl {
+    max-width: 1390px;
+  }
+  @include xxl {
+    max-width: 1890px;
+  }
+}
+body {
+  background-color: $black;
+}

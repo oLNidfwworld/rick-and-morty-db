@@ -1,0 +1,67 @@
+@import '../breakpoints.scss';
+@import '../vars.scss';
+
+.card {
+  display: grid;
+  gap: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $lighter-black;
+  color: $white;
+
+  &__image-wrapper img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    max-height: 300px;
+    width: 100%;
+    @include sm {
+      grid-template-columns: auto 1fr;
+      max-width: 220px;
+    }
+  }
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+
+    @include sm {
+      padding: 10px 10px 10px 0;
+    }
+  }
+  &__name {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+  &__statuses {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  &__term-declare {
+    color: $gray;
+    font-weight: 500;
+  }
+  &__term-describe {
+    color: $semi-white;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  @include sm {
+    grid-template-columns: auto 1fr;
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+  }
+
+  @include lg {
+    max-width: none;
+    margin: 0;
+    width: auto;
+  }
+}

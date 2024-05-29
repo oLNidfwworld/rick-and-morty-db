@@ -1,0 +1,25 @@
+@import '../breakpoints.scss';
+
+.characters-grid {
+  display: grid;
+  gap: 12px;
+  @include lg {
+    grid-template-columns: 1fr 1fr; //repeat(auto-fit, minmax(200px, 1fr))
+  }
+}
+.characters-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include md {
+    flex-direction: row;
+  }
+}
+.characters-top {
+  margin-bottom: 1rem;
+
+  & > .v-btn:not(:first-child) {
+    margin-top: 10px;
+  }
+}
