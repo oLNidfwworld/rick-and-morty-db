@@ -56,6 +56,7 @@ watch(() => filter.value.page, async (newValue) => {
     router.push({
         query: {
             ...route.query,
+            ...filter.value,
             'page': newValue
         }
     })
@@ -68,11 +69,14 @@ watch(() => route.query, async (newVal) => {
     deep: true
 });
 const search = () => {
-    filter.value.page = 1;
+    filter.value = {
+        ...filter.value,
+        page: 1
+    }
     router.push({
         query: {
             ...route.query,
-            ...filter.value
+            ...filter.value,
         }
     })
 }
